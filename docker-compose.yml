@@ -1,0 +1,18 @@
+
+version: "3.8"
+
+services:
+  nextjs:
+    build: .
+    container_name: img-ai-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app          
+      - /app/node_modules # avoid overwriting node_modules
+    environment:
+      - NODE_ENV=development
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+    tty: true
