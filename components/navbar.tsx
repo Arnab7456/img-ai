@@ -7,7 +7,6 @@ import { SignedIn, SignedOut, } from "@clerk/nextjs";
 import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
 import { motion } from "motion/react";
-// import { ModeToggle } from "./user-menu";
 
 const NavbarClient =  () => {
   const {theme , setTheme} = useTheme()
